@@ -4,11 +4,30 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Vehicle Inqire Form</title>
   </head>
   <body>
     <div id="app"></div>
-    <form action="https://formsubmit.co/8ba5bda093183fd9c549c4f116f3338b" method="POST">
+    <form
+      action="https://formsubmit.co/8ba5bda093183fd9c549c4f116f3338b"
+      method="POST"
+    >
+      <!-- Date -->
+      <div class="row">
+        <label class="title" id="title" for="date"> Date </label>
+        <div>
+          <input
+            id="title"
+            name="field"
+            type="date"
+            spellcheck="false"
+            placeholder="01/01/2022"
+            maxlength="8"
+            tabindex="1"
+          />
+        </div>
+      </div>
+
       <!-- full name -->
       <div class="row">
         <label class="desc" for="full_name">*Full Name</label>
@@ -18,10 +37,10 @@
             name="full_name "
             type="text"
             class="field text fn"
-            placeholder="First Name Last Name"
+            placeholder="First & Last Name"
             value=""
             size="50"
-            tabindex="1"
+            tabindex="2"
             required
           />
         </div>
@@ -35,31 +54,60 @@
             name="my_email"
             type="email"
             spellcheck="false"
-            placeholder="mickymouse@gmail.com"
+            placeholder="johnsmith@email.com"
             maxlength="255"
-            tabindex="2"
+            tabindex="3"
             required
           />
         </div>
       </div>
-      <div class="row">
-        <label class="title" id="title" for="date"> Date </label>
+      <br />
+
+      <!-- Radio Buttons -->
+      <div>
+        <legend>Select a Choice</legend>
+
         <div>
-          <input
-            id="title"
-            name="field"
-            type="date"
-            spellcheck="false"
-            placeholder="01/01/2022"
-            maxlength="8"
-            tabindex="3"
-          />
+          <div>
+            <input
+              id="button1"
+              name="my_radio_buttons"
+              type="radio"
+              value="Purchase Vehicle"
+              tabindex="4"
+              checked="checked"
+            />
+            <label for="choice1">Purchase Vehicle</label>
+          </div>
+          <div>
+            <input
+              id="button2"
+              name="my_radio_buttons"
+              type="radio"
+              value="Lease Vehicle"
+              tabindex="5"
+            />
+            <label for="choice2">Lease Vehicle </label>
+          </div>
         </div>
+      </div>
+
+      <div class="row">
+        <label for="cars">Type of vehicle you're interested in:</label>
+        <select class="dropdown-content">
+          <option value="select">Select</option>
+          <option value="choice1">Sedan</option>
+          <option value="choice2">SUV</option>
+          <option value="choice3">Truck</option>
+          <option value="choice4">Minivan</option>
+        </select>
       </div>
 
       <!-- Large Text Area -->
       <div class="row">
-        <label for="textbox"> *Message </label>
+        <label for="textbox">
+          *List desired vehicle Amenities/Specifications:</label
+        >
 
         <div>
           <textarea
@@ -68,78 +116,30 @@
             spellcheck="true"
             rows="10"
             cols="50"
-            tabindex="4"
+            tabindex="6"
             required
           ></textarea>
         </div>
       </div>
-
-      <!-- Radio Buttons -->
-      <div>
-          <legend>Select a Choice</legend>
-
-          <div>
-            <div>
-              <input
-                id="button1"
-                name="my_radio_buttons"
-                type="radio"
-                value="First Choice"
-                tabindex="4"
-                checked="checked"
-              />
-              <label for="choice1">First Choice</label>
-            </div>
-            <div>
-              <input
-                id="button2"
-                name="my_radio_buttons"
-                type="radio"
-                value="Second Choice"
-                tabindex="5"
-              />
-              <label for="choice2">Second Choice </label>
-            </div>
-         
-
-          </div>
-      </div>
-
-      <!-- Dropdown Menu -->
-      <!-- <div>
-      <label for="cars">Choose a car:</label>
-
-      <select name="cars" id="cars">
-        <option value="volvo">Volvo</option>
-        <option value="saab">Saab</option>
-        <option value="mercedes">Mercedes</option>
-        <option value="audi">Audi</option>
-      </select>
-    </div> -->
-      <div class="row">
-        <label for="cars">Choose a car:</label>
-        <select class="dropdown-content">
-          <option value="choice1">checkBox 1</option>
-          <option value="choice2">checkBox 2</option>
-          <option value="choice3">checkBox 3</option>
-        </select>
-      </div>
-
       <!-- Checkboxes -->
       <div class="row">
-        
-          <div>
-            <input
-              id="checkBox1"
-              name="checkBoxes"
-              type="checkBox"
-              value="First Choice"
-              required
-              tabindex="7"
-            />
-            <label for="checkBox1">I agree to pay terms</label>
-          </div>
-          </div>
+        <div>
+          <input
+            id="checkBox1"
+            name="checkBoxes"
+            type="checkBox"
+            value="Agreement"
+            required
+            tabindex="7"
+          />
+          <label for="*checkBox1"
+            >*I agree you may share my contact information with your affiliated
+            dealerships and trusted partners.</label
+          >
+        </div>
+      </div>
+
+      <h5>*Must be completed</h5>
 
       <div>
         <div>
