@@ -1,10 +1,16 @@
+/* Title */
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: black;
   margin-top: 60px;
+}
+
+/* Backgroud */
+body {
+  background-color: rgb(81, 177, 229);
 }
 
 /* makes label bole */
@@ -17,10 +23,7 @@ label {
   padding-top: 15px;
 
 }
-
-
-
-
+/* Invalid boxes outlined in red */
 input[type="checkbox"]:invalid {
   border: dashed 2px red;
    -webkit-appearance: none;
@@ -31,18 +34,19 @@ input[type="checkbox"]:invalid {
   vertical-align: top;
 }
 
-
+/* Input boxes valid to balck */
 input:valid,
 textarea:valid {
   border: 2px solid black;
 }
 
-
+/* Input required boxes invalid to red */
 input:invalid,
 textarea:invalid {
   border: 2px dashed red;
 }
 
-
-
-
+img {
+  width: 900px;
+  height: 200px;
+}
